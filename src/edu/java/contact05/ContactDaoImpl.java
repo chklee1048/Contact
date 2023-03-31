@@ -31,7 +31,7 @@ public class ContactDaoImpl implements ContactDao{
 	}
 	public static ContactDaoImpl getContactDaoImpl() {	// (3)
 		
-		if (instance == null) {
+		if (instance == null) {//
 			instance = new ContactDaoImpl();
 		}
 		return instance;
