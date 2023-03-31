@@ -21,12 +21,8 @@ public class ContactDaoImpl implements ContactDao{
 	private static ContactDaoImpl instance = null;		// (1)
 	
 	private ContactDaoImpl() {							// (2)
-		// 멤버 변수들을 초기화
 		dataDir = FileUtil.initDataDir();// 저장할 폴더 생성
-		
-		// 합쳐져서 저장할 파일 이름 됨
 		dataFile = new File(FileUtil.DATA_DIR, FileUtil.DATA_FILE);// 저장할 파일 생성
-		
 		contacts = FileUtil.initData();// 리스트가 만들어짐
 	}
 	public static ContactDaoImpl getContactDaoImpl() {	// (3)
@@ -67,7 +63,6 @@ public class ContactDaoImpl implements ContactDao{
 	@Override
 	public int create(Contact contact) {
 		contacts.add(contact);
-		// boolean 리턴
 		FileUtil.writeDataToFile(contacts, dataFile);
 		return 1;
 	}

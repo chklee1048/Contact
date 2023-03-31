@@ -73,6 +73,7 @@ public class FileUtil {
 //			}
 			
 		} catch (Exception e) {
+			System.err.println("erorr 났다고 자식아 파일이 비었는데, FIS BIS OIS 안들어간다고");
 			e.printStackTrace();
 		}
 		
@@ -118,15 +119,16 @@ public class FileUtil {
 			System.out.println("파일에 있는 내용을 읽습니다.");
 			// 파일에 저장된 데이터를 읽고, 리스트에 저장하자(de-serial)
 			contactList = readDataFromFile(newFile);
-		} else {
-			try {
-				newFile.createNewFile();
-		        System.out.println("파일 생성 성공.");
-		    } catch (Exception e) {
-		        System.out.println("파일 생성 실패.");
-		        e.printStackTrace();
-		    }
-		}
+		} 
+//		else {
+//			try {
+//				newFile.createNewFile();
+//		        System.out.println("파일 생성 성공.");
+//		    } catch (Exception e) {
+//		        System.out.println("파일 생성 실패.");
+//		        e.printStackTrace();
+//		    }
+//		}
 		return contactList;
 	}
 
