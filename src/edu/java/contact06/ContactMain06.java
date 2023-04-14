@@ -202,7 +202,6 @@ public class ContactMain06 {
 		
 		// 제일 날것의 테이블(컬럼만 채워진)
 		model = new DefaultTableModel(null, COLUMN_NAMES);
-		// TODO
 		// 행 컬럼 색깔 이닛에서 바꿔라
 		table.setBackground(Color.cyan);
 		table.setFont(new Font("D2Coding", Font.BOLD, 20));		
