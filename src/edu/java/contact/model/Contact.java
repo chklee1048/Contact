@@ -11,15 +11,23 @@ import java.io.Serializable;
  *  
  */
 
-public class Contact implements Serializable{
+public class Contact implements Serializable{// 파일에 write 하기위한
+	
+	// 오라클 DB 테이블 이름과 컬럼 이름들을 상수로 정의
+	public interface Entity{
+		String TBL_NAME = "CONTACTS";
+		String COL_CID = "CID";
+		String COL_NAME = "NAME";
+		String COL_PHONE = "PHONE";
+		String COL_EMAIL = "EMAIL";
+	}
+	
 	private int cid;
 	private String name;
 	private String phone;
 	private String email;
 	
-	public Contact() {
-		// TODO Auto-generated constructor stub
-	}
+	public Contact() {}
 	
 	public Contact(int cid, String name, String phone, String email) {
 		super();
